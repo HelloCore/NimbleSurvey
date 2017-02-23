@@ -8,6 +8,7 @@ target 'NimbleSurvey' do
   pod 'Moya-ObjectMapper'
   pod 'Moya'
   pod 'AlamofireImage'
+  pod 'SVProgressHUD'
 
   target 'NimbleSurveyTests' do
     inherit! :search_paths

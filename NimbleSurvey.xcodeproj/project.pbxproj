@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5084444D17729737C9354DEA /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E11CD393A4FC3CA8091011 /* Pods_NimbleSurvey.framework */; };
+		8566D2F51E5F3651005C6802 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */; };
+		8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566D2F61E5F370F005C6802 /* NimbleService.swift */; };
 		85DC64811E5F2C86005EA848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC64801E5F2C86005EA848 /* AppDelegate.swift */; };
 		85DC64831E5F2C86005EA848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC64821E5F2C86005EA848 /* ViewController.swift */; };
 		85DC64861E5F2C86005EA848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DC64841E5F2C86005EA848 /* Main.storyboard */; };
@@ -42,6 +44,9 @@
 		24939923E80061EC24D68EA4 /* Pods_NimbleSurveyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleSurveyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55BEFE47FA73FFCE5269C0AA /* Pods_NimbleSurveyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleSurveyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E11CD393A4FC3CA8091011 /* Pods_NimbleSurvey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleSurvey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852881861E5F332D00D02F3B /* surveys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surveys.json; sourceTree = "<group>"; };
+		8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		8566D2F61E5F370F005C6802 /* NimbleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbleService.swift; sourceTree = "<group>"; };
 		85DC647D1E5F2C86005EA848 /* NimbleSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbleSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DC64801E5F2C86005EA848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85DC64821E5F2C86005EA848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,9 +104,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		852881851E5F332D00D02F3B /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				852881861E5F332D00D02F3B /* surveys.json */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		852881891E5F343E00D02F3B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8566D2F61E5F370F005C6802 /* NimbleService.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8566D2F21E5F362F005C6802 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8566D2F31E5F362F005C6802 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		85DC64741E5F2C86005EA848 = {
 			isa = PBXGroup;
 			children = (
+				852881851E5F332D00D02F3B /* Stub */,
 				85DC647F1E5F2C86005EA848 /* NimbleSurvey */,
 				85DC64941E5F2C87005EA848 /* NimbleSurveyTests */,
 				85DC649F1E5F2C87005EA848 /* NimbleSurveyUITests */,
@@ -124,6 +161,9 @@
 		85DC647F1E5F2C86005EA848 /* NimbleSurvey */ = {
 			isa = PBXGroup;
 			children = (
+				852881891E5F343E00D02F3B /* Common */,
+				8566D2F21E5F362F005C6802 /* Models */,
+				8566D2F31E5F362F005C6802 /* ViewControllers */,
 				85DC64801E5F2C86005EA848 /* AppDelegate.swift */,
 				85DC64821E5F2C86005EA848 /* ViewController.swift */,
 				85DC64841E5F2C86005EA848 /* Main.storyboard */,
@@ -175,6 +215,7 @@
 				CBCC694AD4A358F288072ADC /* [CP] Check Pods Manifest.lock */,
 				85DC64791E5F2C86005EA848 /* Sources */,
 				85DC647A1E5F2C86005EA848 /* Frameworks */,
+				852881881E5F33D500D02F3B /* ShellScript */,
 				85DC647B1E5F2C86005EA848 /* Resources */,
 				E4A68C0E7AA3F661A1EF7DCF /* [CP] Embed Pods Frameworks */,
 				A2B2C22DE9E4E4C382147109 /* [CP] Copy Pods Resources */,
@@ -364,6 +405,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		852881881E5F33D500D02F3B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n    cp -rf \"${PROJECT_DIR}/Stub/surveys.json\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/\"\nfi";
+		};
 		A2B2C22DE9E4E4C382147109 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +502,8 @@
 			files = (
 				85DC64831E5F2C86005EA848 /* ViewController.swift in Sources */,
 				85DC64811E5F2C86005EA848 /* AppDelegate.swift in Sources */,
+				8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */,
+				8566D2F51E5F3651005C6802 /* SplashScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +754,7 @@
 				85DC64A71E5F2C87005EA848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85DC64A81E5F2C87005EA848 /* Build configuration list for PBXNativeTarget "NimbleSurveyTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +763,7 @@
 				85DC64AA1E5F2C87005EA848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85DC64AB1E5F2C87005EA848 /* Build configuration list for PBXNativeTarget "NimbleSurveyUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +772,7 @@
 				85DC64AD1E5F2C87005EA848 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
