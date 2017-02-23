@@ -18,7 +18,7 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
 		SVProgressHUD.show()
 		
-		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(3))
+		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(0.2))
 		provider.request(.fetchSurveys) { (response) in
 			SVProgressHUD.dismiss()
 			switch response {
