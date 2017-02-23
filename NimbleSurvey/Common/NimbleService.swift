@@ -55,7 +55,7 @@ extension NimbleService: TargetType {
 		case .fetchSurveys:
 			#if DEBUG
 				if let path = Bundle.main.path(forResource: "surveys", ofType: "json")
-					,let data = Data(base64Encoded: path){
+					,let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
 					return data
 				}
 			#endif

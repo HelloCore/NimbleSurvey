@@ -10,6 +10,11 @@
 		5084444D17729737C9354DEA /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E11CD393A4FC3CA8091011 /* Pods_NimbleSurvey.framework */; };
 		8566D2F51E5F3651005C6802 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */; };
 		8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566D2F61E5F370F005C6802 /* NimbleService.swift */; };
+		858762101E5F3DF000805921 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587620F1E5F3DF000805921 /* Survey.swift */; };
+		858762141E5F3E1400805921 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762131E5F3E1400805921 /* Question.swift */; };
+		858762161E5F3E1E00805921 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762151E5F3E1E00805921 /* Answer.swift */; };
+		858762181E5F411600805921 /* SurveyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762171E5F411600805921 /* SurveyTheme.swift */; };
+		8587621A1E5F481200805921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762191E5F481200805921 /* Constants.swift */; };
 		85DC64811E5F2C86005EA848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC64801E5F2C86005EA848 /* AppDelegate.swift */; };
 		85DC64831E5F2C86005EA848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC64821E5F2C86005EA848 /* ViewController.swift */; };
 		85DC64861E5F2C86005EA848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DC64841E5F2C86005EA848 /* Main.storyboard */; };
@@ -47,9 +52,14 @@
 		852881861E5F332D00D02F3B /* surveys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surveys.json; sourceTree = "<group>"; };
 		8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		8566D2F61E5F370F005C6802 /* NimbleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbleService.swift; sourceTree = "<group>"; };
+		8587620F1E5F3DF000805921 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		858762131E5F3E1400805921 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		858762151E5F3E1E00805921 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		858762171E5F411600805921 /* SurveyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTheme.swift; sourceTree = "<group>"; };
+		858762191E5F481200805921 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		85DC647D1E5F2C86005EA848 /* NimbleSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbleSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DC64801E5F2C86005EA848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85DC64821E5F2C86005EA848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85DC64821E5F2C86005EA848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		85DC64851E5F2C86005EA848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85DC64871E5F2C86005EA848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85DC648A1E5F2C86005EA848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8566D2F61E5F370F005C6802 /* NimbleService.swift */,
+				858762191E5F481200805921 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -123,6 +134,10 @@
 		8566D2F21E5F362F005C6802 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8587620F1E5F3DF000805921 /* Survey.swift */,
+				858762131E5F3E1400805921 /* Question.swift */,
+				858762151E5F3E1E00805921 /* Answer.swift */,
+				858762171E5F411600805921 /* SurveyTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 		8566D2F31E5F362F005C6802 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				85DC64821E5F2C86005EA848 /* ViewController.swift */,
 				8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */,
 			);
 			path = ViewControllers;
@@ -165,7 +181,6 @@
 				8566D2F21E5F362F005C6802 /* Models */,
 				8566D2F31E5F362F005C6802 /* ViewControllers */,
 				85DC64801E5F2C86005EA848 /* AppDelegate.swift */,
-				85DC64821E5F2C86005EA848 /* ViewController.swift */,
 				85DC64841E5F2C86005EA848 /* Main.storyboard */,
 				85DC64871E5F2C86005EA848 /* Assets.xcassets */,
 				85DC64891E5F2C86005EA848 /* LaunchScreen.storyboard */,
@@ -502,8 +517,13 @@
 			files = (
 				85DC64831E5F2C86005EA848 /* ViewController.swift in Sources */,
 				85DC64811E5F2C86005EA848 /* AppDelegate.swift in Sources */,
+				858762101E5F3DF000805921 /* Survey.swift in Sources */,
 				8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */,
+				858762141E5F3E1400805921 /* Question.swift in Sources */,
+				858762181E5F411600805921 /* SurveyTheme.swift in Sources */,
 				8566D2F51E5F3651005C6802 /* SplashScreenViewController.swift in Sources */,
+				858762161E5F3E1E00805921 /* Answer.swift in Sources */,
+				8587621A1E5F481200805921 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

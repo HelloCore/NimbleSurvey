@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 	
+	var surveys: [Survey]?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		if let surveys = surveys {
+			print(surveys)			
+		}
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 

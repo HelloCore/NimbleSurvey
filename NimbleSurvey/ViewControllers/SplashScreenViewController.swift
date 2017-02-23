@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import SVProgressHUD
+import Moya
+import Moya_ObjectMapper
 
 class SplashScreenViewController: UIViewController {
-
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		SVProgressHUD.show()
+		
+		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(3))
+		provider.request(.fetchSurveys) { (response) in
+			SVProgressHUD.dismiss()
+			switch response {
+			case .success(let response):
+				let surveys = try? response.mapArray(Survey.self)
+				if let surveys = surveys {
+					self.performSegue(withIdentifier: Constants.SegueIdentifier.GoToMainPage, sender: surveys)
+				}else{
+					print("ERROR")
+				}
+				break
+			case .failure(let error):
+				print(error)
+				break
+			}
+		}
     }
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+		
     }
     
-
-    /*
+	
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+		if(segue.identifier == Constants.SegueIdentifier.GoToMainPage){
+			let navDestination = segue.destination as? UINavigationController
+			
+			if let navDestination = navDestination
+				,let vc = navDestination.viewControllers.first as? ViewController
+				,let surveys = sender as? [Survey] {
+				vc.surveys = surveys
+			}
+		}
     }
-    */
+	
 
 }
