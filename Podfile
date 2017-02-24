@@ -9,6 +9,7 @@ target 'NimbleSurvey' do
   pod 'Moya'
   pod 'AlamofireImage'
   pod 'SVProgressHUD'
+  pod 'PageControls'
 
   target 'NimbleSurveyTests' do
     inherit! :search_paths

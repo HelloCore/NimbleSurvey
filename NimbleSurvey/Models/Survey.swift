@@ -35,6 +35,12 @@ class Survey: Mappable{
 	var theme: SurveyTheme?
 	var questions: [Question]?
 	
+	var large_cover_image_url: String {
+		get {
+			return (cover_image_url.isEmpty) ? "" : cover_image_url + "l"
+		}
+	}
+	
 	required init?(map: Map){
 		
 	}
@@ -49,6 +55,7 @@ class Survey: Mappable{
 		footer_content <- map["footer_content"]
 		is_active <- map["is_active"]
 		cover_image_url <- map["cover_image_url"]
+		
 		cover_background_color <- map["cover_background_color"]
 		type <- map["type"]
 		created_at <- map["created_at"]

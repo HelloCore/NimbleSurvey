@@ -10,6 +10,15 @@ import UIKit
 
 class SurveyCollectionViewCell: UICollectionViewCell {
     
-	@IBOutlet weak var mainImageView: UIImageView!
+	@IBOutlet weak var backgroundImageView: UIImageView!
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var descLabel: UILabel!
+	@IBOutlet weak var submitButton: UIButton!
+	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		
+		submitButton.layer.cornerRadius = 22
+	}
 	
 }

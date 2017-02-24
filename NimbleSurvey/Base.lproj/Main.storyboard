@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r5m-wB-f9a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XXp-xW-I41">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,10 +23,10 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-25-G0v">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-25-G0v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.39124602079999998" green="0.39156565069999999" blue="0.39129555230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.1137254902" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ONC-6C-c2m">
                                     <size key="itemSize" width="375" height="603"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -42,16 +41,67 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GV3-Hv-Bus">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GV3-Hv-Bus">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5q-9D-Goc">
+                                                    <rect key="frame" x="-0.5" y="-0.5" width="375" height="603"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30169882550335569" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIP-qu-lMt">
+                                                    <rect key="frame" x="10" y="34" width="355" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="63" id="tvx-AY-lJv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.070588235289999995" green="0.1137254902" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marriott Bangkok Sukhumvit Hotel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGq-gl-4Lr">
+                                                    <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="YJH-eU-5Fc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.070588235289999995" green="0.1137254902" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-Ov-jrw">
+                                                    <rect key="frame" x="108" y="498" width="158" height="42"/>
+                                                    <color key="backgroundColor" red="0.7803921568627451" green="0.14117647058823529" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="158" id="XMh-15-CXx"/>
+                                                        <constraint firstAttribute="height" constant="42" id="ZVR-te-lPY"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Take the survey"/>
+                                                </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.7309797538272067" green="0.91937084384870449" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="vGq-gl-4Lr" firstAttribute="centerX" secondItem="RON-Rz-4MP" secondAttribute="centerX" id="5P9-ML-MN5"/>
+                                            <constraint firstItem="G5q-9D-Goc" firstAttribute="height" secondItem="RON-Rz-4MP" secondAttribute="height" id="JZX-DJ-Ejd"/>
+                                            <constraint firstItem="PIP-qu-lMt" firstAttribute="centerX" secondItem="RON-Rz-4MP" secondAttribute="centerX" id="QH0-Vs-Ws6"/>
+                                            <constraint firstItem="vGq-gl-4Lr" firstAttribute="width" secondItem="RON-Rz-4MP" secondAttribute="width" id="Xpn-jq-RID"/>
+                                            <constraint firstItem="PIP-qu-lMt" firstAttribute="width" secondItem="RON-Rz-4MP" secondAttribute="width" constant="-20" id="Yip-jj-SQU"/>
+                                            <constraint firstItem="PIP-qu-lMt" firstAttribute="top" secondItem="RON-Rz-4MP" secondAttribute="topMargin" constant="26" id="eB5-bl-mqM"/>
+                                            <constraint firstItem="vGq-gl-4Lr" firstAttribute="top" secondItem="PIP-qu-lMt" secondAttribute="bottom" constant="11" id="lCc-V3-RpX"/>
+                                            <constraint firstItem="G5q-9D-Goc" firstAttribute="width" secondItem="RON-Rz-4MP" secondAttribute="width" id="mi3-C5-Rjc"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="tOh-Ov-jrw" secondAttribute="bottom" constant="55" id="nsI-Qw-0Al"/>
+                                            <constraint firstItem="G5q-9D-Goc" firstAttribute="centerX" secondItem="RON-Rz-4MP" secondAttribute="centerX" id="pXL-PX-1of"/>
+                                            <constraint firstItem="G5q-9D-Goc" firstAttribute="centerY" secondItem="RON-Rz-4MP" secondAttribute="centerY" id="pve-gO-pxj"/>
+                                            <constraint firstItem="tOh-Ov-jrw" firstAttribute="centerX" secondItem="RON-Rz-4MP" secondAttribute="centerX" id="rLj-6v-h1y"/>
+                                        </constraints>
                                         <size key="customSize" width="375" height="603"/>
                                         <connections>
-                                            <outlet property="mainImageView" destination="GV3-Hv-Bus" id="KPl-Xs-X8S"/>
+                                            <outlet property="backgroundImageView" destination="GV3-Hv-Bus" id="n2h-2b-Kgy"/>
+                                            <outlet property="descLabel" destination="vGq-gl-4Lr" id="87h-Wj-jtV"/>
+                                            <outlet property="submitButton" destination="tOh-Ov-jrw" id="Yyd-a8-PfT"/>
+                                            <outlet property="titleLabel" destination="PIP-qu-lMt" id="sdS-uK-50s"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -60,47 +110,40 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2aE-3d-ra3"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="R8g-TU-Do7">
-                                <rect key="frame" x="47.5" y="283" width="603" height="37"/>
-                            </pageControl>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="LMz-a4-YPm" customClass="FilledPageControl" customModule="PageControls">
+                                <rect key="frame" x="355" y="296.5" width="0.0" height="10"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pageCount">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inactiveRingWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="R8g-TU-Do7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Ur-X4-eNf"/>
-                            <constraint firstItem="R8g-TU-Do7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" id="ASs-nT-kJM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R8g-TU-Do7" secondAttribute="centerX" constant="10" id="ggK-eb-3WS"/>
+                            <constraint firstItem="LMz-a4-YPm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="trailing" constant="-20" id="H06-KF-kpp"/>
+                            <constraint firstItem="LMz-a4-YPm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vda-CK-Lan"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mGA-Z4-yXf"/>
                     <connections>
                         <outlet property="mainCollectionView" destination="YbK-25-G0v" id="Y98-mK-bEr"/>
-                        <outlet property="mainPageControl" destination="R8g-TU-Do7" id="ZST-MJ-7yK"/>
+                        <outlet property="mainPageControl" destination="LMz-a4-YPm" id="wXM-rT-jEX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1180" y="792.95352323838085"/>
-        </scene>
-        <!--Splash Screen View Controller-->
-        <scene sceneID="ybc-qI-Nac">
-            <objects>
-                <viewController id="r5m-wB-f9a" customClass="SplashScreenViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6GT-vV-7Wc"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Lj-Pq-SNe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VjQ-b0-F4r">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="XXp-xW-I41" kind="presentation" identifier="GO_TO_MAIN_PAGE" modalTransitionStyle="crossDissolve" id="SP9-au-vml"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LNs-uV-dSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-751" y="793"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n6o-Ia-Nei">
@@ -108,10 +151,10 @@
                 <navigationController id="XXp-xW-I41" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2oj-km-2Aj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="2oj-km-2Aj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.73097975380000002" green="0.9193708438" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.070588235294117646" green="0.11372549019607843" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5084444D17729737C9354DEA /* Pods_NimbleSurvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E11CD393A4FC3CA8091011 /* Pods_NimbleSurvey.framework */; };
-		8566D2F51E5F3651005C6802 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */; };
 		8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566D2F61E5F370F005C6802 /* NimbleService.swift */; };
 		858762101E5F3DF000805921 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587620F1E5F3DF000805921 /* Survey.swift */; };
 		858762141E5F3E1400805921 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762131E5F3E1400805921 /* Question.swift */; };
@@ -51,7 +50,6 @@
 		55BEFE47FA73FFCE5269C0AA /* Pods_NimbleSurveyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleSurveyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E11CD393A4FC3CA8091011 /* Pods_NimbleSurvey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbleSurvey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		852881861E5F332D00D02F3B /* surveys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = surveys.json; sourceTree = "<group>"; };
-		8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		8566D2F61E5F370F005C6802 /* NimbleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbleService.swift; sourceTree = "<group>"; };
 		8587620F1E5F3DF000805921 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		858762131E5F3E1400805921 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				85DC64821E5F2C86005EA848 /* ViewController.swift */,
-				8566D2F41E5F3651005C6802 /* SplashScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -532,7 +529,6 @@
 				8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */,
 				858762141E5F3E1400805921 /* Question.swift in Sources */,
 				858762181E5F411600805921 /* SurveyTheme.swift in Sources */,
-				8566D2F51E5F3651005C6802 /* SplashScreenViewController.swift in Sources */,
 				858762161E5F3E1E00805921 /* Answer.swift in Sources */,
 				8587621D1E5F4FF000805921 /* SurveyCollectionViewCell.swift in Sources */,
 				8587621A1E5F481200805921 /* Constants.swift in Sources */,
