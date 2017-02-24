@@ -31,14 +31,15 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	override var preferredStatusBarStyle: UIStatusBarStyle {
-		return .lightContent
+	var currentPage : Int {
+		get {
+			return mainPageControl.currentPage
+		}
 	}
-	
+		
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.title = "SURVEYS"
-		UIApplication.shared.statusBarStyle = .lightContent
 
 		mainCollectionView.emptyDataSetSource = self
 		mainPageControl.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
@@ -61,28 +62,34 @@ class ViewController: UIViewController {
 		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(0.2))
 		provider.request(.fetchSurveys) { (response) in
 			SVProgressHUD.dismiss()
+			if(self.surveys.count > 0){
+				self.surveys.removeAll()
+			}
 			switch response {
 			case .success(let response):
 				let surveys = try? response.mapArray(Survey.self)
 				if let surveys = surveys {
 					self.surveys = surveys
-				}else{
-					if(self.surveys.count > 0){
-						self.surveys.removeAll()
-					}
 				}
+				
 				break
-			case .failure(let error):
-				if(self.surveys.count > 0){
-					self.surveys.removeAll()
-				}
+			case .failure(_):
+				
 				break
 			}
 		}
 	}
 	
 	func takeSurveyBtnTap() {
-		
+		performSegue(withIdentifier: Constants.SegueIdentifier.ShowDetailPage, sender: nil)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == Constants.SegueIdentifier.ShowDetailPage {
+			if let target = segue.destination as? QuestionViewController {
+				target.survey = surveys[currentPage]
+			}
+		}
 	}
 }
 
@@ -96,7 +103,7 @@ extension ViewController: UICollectionViewDataSource {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ViewController.surveyCellIdentifier, for: indexPath)
 		if let cell = cell as? SurveyCollectionViewCell {
 			let surveyObject = surveys[indexPath.row]
-			if !surveyObject.large_cover_image_url.isEmpty {
+			if surveyObject.large_cover_image_url.isEmpty == false {
 				if let cover_url = URL(string: surveyObject.large_cover_image_url) {
 					cell.backgroundImageView.af_setImage(withURL: cover_url)
 				}
@@ -115,7 +122,10 @@ extension ViewController: UICollectionViewDelegate {
 		let scrollY = scrollView.contentOffset.y
 		let pageHeight = mainCollectionView.frame.size.height
 		
+		// Find Page
 		let page = scrollY / pageHeight
+		
+		// Calculate Progress
 		let progressInPage = scrollY - (page * pageHeight)
 		let progress = CGFloat(page) + progressInPage
 		

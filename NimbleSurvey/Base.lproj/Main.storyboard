@@ -26,7 +26,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-25-G0v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.27118361000000002" green="0.43525099750000001" blue="0.63457679749999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.20869428370000001" green="0.29638548549999999" blue="0.51864966300000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ONC-6C-c2m">
                                     <size key="itemSize" width="375" height="603"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -142,16 +142,58 @@
                                 <action selector="refreshBtnTap:" destination="BYZ-38-t0r" id="nlO-Vo-pfU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="fa_bar" id="K8A-TY-s77"/>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="mainCollectionView" destination="YbK-25-G0v" id="Y98-mK-bEr"/>
                         <outlet property="mainPageControl" destination="LMz-a4-YPm" id="wXM-rT-jEX"/>
+                        <segue destination="M1F-Ri-wNY" kind="show" identifier="SHOW_DETAIL_PAGE" id="bTm-BX-42k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="792.95352323838085"/>
+            <point key="canvasLocation" x="1271" y="794"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="mPA-rd-9lG">
+            <objects>
+                <viewController id="M1F-Ri-wNY" customClass="QuestionViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iCH-gF-4Mp"/>
+                        <viewControllerLayoutGuide type="bottom" id="RPB-YV-egB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Frc-MY-xJI">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2c-Uh-nkb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="q7l-Mj-F3t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.070588235289999995" green="0.1137254902" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2086942836910167" green="0.296385485523041" blue="0.51864966299019599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q2c-Uh-nkb" firstAttribute="top" secondItem="iCH-gF-4Mp" secondAttribute="bottom" constant="64" id="aU5-fG-uQH"/>
+                            <constraint firstItem="Q2c-Uh-nkb" firstAttribute="width" secondItem="Frc-MY-xJI" secondAttribute="width" id="jmQ-BH-9gV"/>
+                            <constraint firstItem="Q2c-Uh-nkb" firstAttribute="centerX" secondItem="Frc-MY-xJI" secondAttribute="centerX" id="oWZ-Ob-GNC"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Q2c-Uh-nkb" id="Pxm-Cm-04Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="duj-my-kMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="794"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n6o-Ia-Nei">
@@ -178,4 +220,7 @@
             <point key="canvasLocation" x="140" y="792.95352323838085"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fa_bar" width="33" height="33"/>
+    </resources>
 </document>

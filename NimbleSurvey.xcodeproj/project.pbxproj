@@ -15,8 +15,9 @@
 		858762181E5F411600805921 /* SurveyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762171E5F411600805921 /* SurveyTheme.swift */; };
 		8587621A1E5F481200805921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858762191E5F481200805921 /* Constants.swift */; };
 		8587621D1E5F4FF000805921 /* SurveyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587621C1E5F4FF000805921 /* SurveyCollectionViewCell.swift */; };
+		85D0C4FB1E60834600594DD6 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D0C4FA1E60834600594DD6 /* QuestionViewController.swift */; };
+		85D0C4FD1E60836500594DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D0C4FC1E60836500594DD6 /* ViewController.swift */; };
 		85DC64811E5F2C86005EA848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC64801E5F2C86005EA848 /* AppDelegate.swift */; };
-		85DC64831E5F2C86005EA848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC64821E5F2C86005EA848 /* ViewController.swift */; };
 		85DC64861E5F2C86005EA848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DC64841E5F2C86005EA848 /* Main.storyboard */; };
 		85DC64881E5F2C86005EA848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DC64871E5F2C86005EA848 /* Assets.xcassets */; };
 		85DC648B1E5F2C86005EA848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DC64891E5F2C86005EA848 /* LaunchScreen.storyboard */; };
@@ -57,9 +58,10 @@
 		858762171E5F411600805921 /* SurveyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTheme.swift; sourceTree = "<group>"; };
 		858762191E5F481200805921 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8587621C1E5F4FF000805921 /* SurveyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyCollectionViewCell.swift; sourceTree = "<group>"; };
+		85D0C4FA1E60834600594DD6 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		85D0C4FC1E60836500594DD6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85DC647D1E5F2C86005EA848 /* NimbleSurvey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NimbleSurvey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DC64801E5F2C86005EA848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85DC64821E5F2C86005EA848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		85DC64851E5F2C86005EA848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85DC64871E5F2C86005EA848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85DC648A1E5F2C86005EA848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,7 +147,8 @@
 		8566D2F31E5F362F005C6802 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				85DC64821E5F2C86005EA848 /* ViewController.swift */,
+				85D0C4FC1E60836500594DD6 /* ViewController.swift */,
+				85D0C4FA1E60834600594DD6 /* QuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -523,12 +526,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DC64831E5F2C86005EA848 /* ViewController.swift in Sources */,
+				85D0C4FD1E60836500594DD6 /* ViewController.swift in Sources */,
 				85DC64811E5F2C86005EA848 /* AppDelegate.swift in Sources */,
 				858762101E5F3DF000805921 /* Survey.swift in Sources */,
 				8566D2F71E5F370F005C6802 /* NimbleService.swift in Sources */,
 				858762141E5F3E1400805921 /* Question.swift in Sources */,
 				858762181E5F411600805921 /* SurveyTheme.swift in Sources */,
+				85D0C4FB1E60834600594DD6 /* QuestionViewController.swift in Sources */,
 				858762161E5F3E1E00805921 /* Answer.swift in Sources */,
 				8587621D1E5F4FF000805921 /* SurveyCollectionViewCell.swift in Sources */,
 				8587621A1E5F481200805921 /* Constants.swift in Sources */,

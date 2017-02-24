@@ -10,6 +10,6 @@ import Foundation
 
 struct Constants {
 	struct SegueIdentifier {
-		static let GoToMainPage = "GO_TO_MAIN_PAGE"
+		static let ShowDetailPage = "SHOW_DETAIL_PAGE"
 	}
 }
