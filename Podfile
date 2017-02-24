@@ -10,6 +10,7 @@ target 'NimbleSurvey' do
   pod 'AlamofireImage'
   pod 'SVProgressHUD'
   pod 'PageControls'
+  pod 'DZNEmptyDataSet'
 
   target 'NimbleSurveyTests' do
     inherit! :search_paths
