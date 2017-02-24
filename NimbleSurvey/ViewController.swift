@@ -12,8 +12,12 @@ import PageControls
 import Moya
 import Moya_ObjectMapper
 import SVProgressHUD
+import DZNEmptyDataSet
 
 class ViewController: UIViewController {
+	
+	
+	@IBOutlet var emptyDataView: UIView!
 	
 	@IBOutlet weak var mainCollectionView: UICollectionView!
 	@IBOutlet weak var mainPageControl: FilledPageControl!
@@ -27,16 +31,29 @@ class ViewController: UIViewController {
 		}
 	}
 	
+	override var preferredStatusBarStyle: UIStatusBarStyle {
+		return .lightContent
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.title = "SURVEYS"
+		UIApplication.shared.statusBarStyle = .lightContent
+
+		mainCollectionView.emptyDataSetSource = self
 		mainPageControl.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
-		fetchSurveyData()
+		
+//		fetchSurveyData()
 	}
 	
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		
+	}
+	
+	@IBAction func refreshBtnTap(_ sender: Any) {
+		fetchSurveyData()
 	}
 	
 	func fetchSurveyData() {
@@ -50,11 +67,15 @@ class ViewController: UIViewController {
 				if let surveys = surveys {
 					self.surveys = surveys
 				}else{
-					print("ERROR")
+					if(self.surveys.count > 0){
+						self.surveys.removeAll()
+					}
 				}
 				break
 			case .failure(let error):
-				print(error)
+				if(self.surveys.count > 0){
+					self.surveys.removeAll()
+				}
 				break
 			}
 		}
@@ -103,4 +124,15 @@ extension ViewController: UICollectionViewDelegate {
 	
 }
 
+extension ViewController: DZNEmptyDataSetSource {
+	
+	func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+		return NSAttributedString(string: "Sorry", attributes: [NSForegroundColorAttributeName: UIColor.white])
+	}
+	
+	func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+		return NSAttributedString(string: "Data Not Found", attributes: [NSForegroundColorAttributeName: UIColor.white])
+	}
+	
+}
 

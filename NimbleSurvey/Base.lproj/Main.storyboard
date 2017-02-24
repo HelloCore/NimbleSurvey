@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SURVEYS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NimbleSurvey" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbK-25-G0v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.1137254902" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.27118361000000002" green="0.43525099750000001" blue="0.63457679749999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ONC-6C-c2m">
                                     <size key="itemSize" width="375" height="603"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -135,7 +135,15 @@
                             <constraint firstItem="LMz-a4-YPm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vda-CK-Lan"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mGA-Z4-yXf"/>
+                    <navigationItem key="navigationItem" title="SURVEYS" id="mGA-Z4-yXf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="ihK-nc-ZDB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="refreshBtnTap:" destination="BYZ-38-t0r" id="nlO-Vo-pfU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="mainCollectionView" destination="YbK-25-G0v" id="Y98-mK-bEr"/>
                         <outlet property="mainPageControl" destination="LMz-a4-YPm" id="wXM-rT-jEX"/>
@@ -154,7 +162,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="2oj-km-2Aj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.070588235294117646" green="0.11372549019607843" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
