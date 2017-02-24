@@ -24,13 +24,13 @@ class ViewController: UIViewController {
 	
 	static let surveyCellIdentifier = "SURVEY_CELL_IDENTIFIER"
 	
+	var isLoaded = false
 	var surveys = [Survey]() {
 		didSet {
 			mainPageControl.pageCount = surveys.count
 			mainCollectionView.reloadData()
 		}
 	}
-	
 	var currentPage : Int {
 		get {
 			return mainPageControl.currentPage
@@ -42,9 +42,11 @@ class ViewController: UIViewController {
 		self.title = "SURVEYS"
 
 		mainCollectionView.emptyDataSetSource = self
+		mainCollectionView.emptyDataSetDelegate = self
 		mainPageControl.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+		SVProgressHUD.setDefaultMaskType(.gradient)
 		
-//		fetchSurveyData()
+		fetchSurveyData()
 	}
 	
 
@@ -59,33 +61,37 @@ class ViewController: UIViewController {
 	
 	func fetchSurveyData() {
 		SVProgressHUD.show()
-		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(0.2))
-		provider.request(.fetchSurveys) { (response) in
+		
+//		Stub Data Here
+//		Force set access_token at AppDelegate
+//		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(2))
+		
+		let provider = MoyaProvider<NimbleService>()
+		
+		provider.request(.fetchSurveys) { [unowned self] (response) in
+			self.isLoaded = true
 			SVProgressHUD.dismiss()
-			if(self.surveys.count > 0){
-				self.surveys.removeAll()
-			}
 			switch response {
 			case .success(let response):
 				let surveys = try? response.mapArray(Survey.self)
 				if let surveys = surveys {
 					self.surveys = surveys
+					return
 				}
-				
 				break
 			case .failure(_):
-				
 				break
 			}
+			self.surveys = [Survey]()
 		}
 	}
 	
 	func takeSurveyBtnTap() {
-		performSegue(withIdentifier: Constants.SegueIdentifier.ShowDetailPage, sender: nil)
+		performSegue(withIdentifier: Constants.SegueIdentifiers.ShowDetailPage, sender: nil)
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == Constants.SegueIdentifier.ShowDetailPage {
+		if segue.identifier == Constants.SegueIdentifiers.ShowDetailPage {
 			if let target = segue.destination as? QuestionViewController {
 				target.survey = surveys[currentPage]
 			}
@@ -144,5 +150,15 @@ extension ViewController: DZNEmptyDataSetSource {
 		return NSAttributedString(string: "Data Not Found", attributes: [NSForegroundColorAttributeName: UIColor.white])
 	}
 	
+}
+
+extension ViewController: DZNEmptyDataSetDelegate {
+	func emptyDataSetShouldDisplay(_ scrollView: UIScrollView!) -> Bool {
+		return self.isLoaded
+	}
+	
+	func emptyDataSetShouldAllowTouch(_ scrollView: UIScrollView!) -> Bool {
+		return false
+	}
 }
 

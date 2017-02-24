@@ -9,7 +9,25 @@
 import Foundation
 
 struct Constants {
-	struct SegueIdentifier {
+	struct SegueIdentifiers {
 		static let ShowDetailPage = "SHOW_DETAIL_PAGE"
+	}
+	
+	struct UserDetaultKeys {
+		static let accessTokenKey = "USER_DEFAULT_ACCESS_TOKEN_KEY"
+	}
+	
+	struct ParametersKey {
+		struct FetchSurveys {
+			static let accessTokenKey = "access_token"
+		}
+		
+		struct Authen {
+			static let grantTypeKey = "grant_type"
+			static let grantTypeValue = "password"
+			
+			static let usernameKey = "username"
+			static let passwordKey = "password"
+		}
 	}
 }
