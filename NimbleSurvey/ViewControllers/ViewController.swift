@@ -40,10 +40,16 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.title = "SURVEYS"
-
+		
+//		Force set access_token
+		UserDefaults.standard.set("d9584af77d8c0d6622e2b3c554ed520b2ae64ba0721e52daa12d6eaa5e5cdd93", forKey: Constants.UserDetaultKeys.accessTokenKey)
+		
 		mainCollectionView.emptyDataSetSource = self
 		mainCollectionView.emptyDataSetDelegate = self
+		
+		// rotate page control 90 degree
 		mainPageControl.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+		
 		SVProgressHUD.setDefaultMaskType(.gradient)
 		
 		fetchSurveyData()
@@ -63,7 +69,6 @@ class ViewController: UIViewController {
 		SVProgressHUD.show()
 		
 //		Stub Data Here
-//		Force set access_token at AppDelegate
 //		let provider = MoyaProvider<NimbleService>(stubClosure: MoyaProvider.delayedStub(2))
 		
 		let provider = MoyaProvider<NimbleService>()

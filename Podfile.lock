@@ -13,7 +13,6 @@ PODS:
   - Moya/Core (8.0.1):
     - Alamofire (~> 4.2.0)
     - Result (~> 3.1.0)
-  - Nimble (6.0.1)
   - ObjectMapper (2.2.2)
   - PageControls (1.0.0):
     - PageControls/FilledPageControl (= 1.0.0)
@@ -24,7 +23,6 @@ PODS:
   - PageControls/PillPageControl (1.0.0)
   - PageControls/ScrollingPageControl (1.0.0)
   - PageControls/SnakePageControl (1.0.0)
-  - Quick (1.0.0)
   - Result (3.1.0)
   - SVProgressHUD (2.1.2)
 
@@ -33,9 +31,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - Moya
   - Moya-ObjectMapper
-  - Nimble
   - PageControls
-  - Quick
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -44,13 +40,11 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Moya: f2e10a04fcb27fec154cb2afa4e536e8b46dac04
   Moya-ObjectMapper: b7f1f44f02b14c97d8a8efe9c6f8e6072252a58c
-  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   PageControls: b849ed122534d97247fa8bedeab1e37b3fdd2b21
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 96218511ab82e50db63b5e0a8758535bc50b447d
+PODFILE CHECKSUM: 511e57a706065e15439e52784edad5e903fd5c58
 
 COCOAPODS: 1.2.0

@@ -58,6 +58,7 @@ extension NimbleService: TargetType {
 		switch self {
 		case .fetchSurveys:
 			#if DEBUG
+//				Using run script in build phases to copy JSON file when configuration is DEBUG
 				if let path = Bundle.main.path(forResource: "surveys", ofType: "json")
 					,let data = try? Data(contentsOf: URL(fileURLWithPath: path)){
 					return data
@@ -65,7 +66,10 @@ extension NimbleService: TargetType {
 			#endif
 			return Data()
 		case .authen:
-			return "d9584af77d8c0d6622e2b3c554ed520b2ae64ba0721e52daa12d6eaa5e5cdd93".utf8Encoded
+			return ("{\"access_token\":\"d9584af77d8c0d6622e2b3c554ed520b2ae64ba0721e52daa12d6eaa5e5cdd93\"," +
+					"\"token_type\":\"bearer\"," +
+					"\"expires_in\":7200," +
+					"\"created_at\":1485174186}").utf8Encoded
 		}
 	}
 	

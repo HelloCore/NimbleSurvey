@@ -15,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {		
 		// Override point for customization after application launch.
-		
-		UserDefaults.standard.set("d9584af77d8c0d6622e2b3c554ed520b2ae64ba0721e52daa12d6eaa5e5cdd93", forKey: Constants.UserDetaultKeys.accessTokenKey)
-		
+				
 		return true
 	}
 
