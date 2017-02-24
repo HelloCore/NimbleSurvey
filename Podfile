@@ -15,9 +15,6 @@ target 'NimbleSurvey' do
   target 'NimbleSurveyTests' do
     inherit! :search_paths
 
-    pod 'Quick'
-    pod 'Nimble'
-
     # Pods for testing
   end
 
