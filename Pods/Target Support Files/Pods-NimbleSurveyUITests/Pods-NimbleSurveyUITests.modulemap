@@ -1,0 +1,6 @@
+framework module Pods_NimbleSurveyUITests {
+  umbrella header "Pods-NimbleSurveyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
